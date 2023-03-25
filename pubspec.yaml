@@ -17,3 +17,18 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/diamonds.png
+    - assets/images/music_card.png
+    - assets/images/geo_card.png
+    - assets/images/find_card.png
+
+  fonts:
+    - family: Roslindale
+      fonts:
+        - asset: assets/fonts/RoslindaleDeckNarrowBoldTesting.ttf
+          weight: 700
+        - asset: assets/fonts/RoslindaleDeckNarrowRegularTesting.ttf
+
+
