@@ -101,6 +101,15 @@ class GameService{
     ];
   }
 
+  List<Category> getCategories(){
+    return [
+      Category.math(),
+      Category.sicence(),
+      Category.grammar(),
+      Category.music(),
+      Category.geography(),
 
+    ];
+  }
 
 }

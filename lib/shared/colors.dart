@@ -6,6 +6,7 @@ class AppColors{
   static const Color textColor = Colors.white;
   static const Color textColorTag = Color(0xFFE5E5EA);
   static const Color iconColor = Color(0xFF1C1C1E);
+  static const Color cardColor = Color(0xFF3A3A3C);
 
 
 

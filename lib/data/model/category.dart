@@ -27,7 +27,7 @@ class Category{
   }
 
   factory Category.geography(){
-    return Category('Geography', 'assets/images/geo_logo.png',AppColors.geoBC, AppColors.geoSC);
+    return Category('Geo', 'assets/images/geo_logo.png',AppColors.geoBC, AppColors.geoSC);
   }
 
 }

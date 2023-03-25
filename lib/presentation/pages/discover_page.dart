@@ -1,5 +1,7 @@
+import 'package:educational_app_maquetacion/data/model/category.dart';
 import 'package:educational_app_maquetacion/data/model/game.dart';
 import 'package:educational_app_maquetacion/data/service/game_service.dart';
+import 'package:educational_app_maquetacion/presentation/widgets/cateogry_widget.dart';
 import 'package:educational_app_maquetacion/presentation/widgets/points_widget.dart';
 import 'package:educational_app_maquetacion/presentation/widgets/recent_game_widget.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +19,7 @@ class DiscoverPage extends StatefulWidget {
 class _DiscoverPageState extends State<DiscoverPage> {
 
   final List<Game> _recentGames = GameService().getRecentGames();
+  final List<Category> _categories = GameService().getCategories();
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +32,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
             children: [
               _header(),
               _recent(size),
-              _categories(),
+              _builCategories(size),
               _newGames(),
             ],
           ),
@@ -63,23 +66,52 @@ class _DiscoverPageState extends State<DiscoverPage> {
         children: [
           const SizedBox(height: 25,),
           Text("RECENT", style: Theme.of(context).textTheme.labelMedium,),
+          const SizedBox(height: 15,),
           SizedBox(
             height: size.height*0.215,
-            child: ListView(
+            child: ListView.separated(
+              separatorBuilder: (context, index) => const SizedBox(width: 15),
               shrinkWrap: true,
+              itemCount: _recentGames.length,
               scrollDirection: Axis.horizontal,
-              children: _recentGames.map((e) => RecentGameWidget(game: e)).toList(),
+              itemBuilder: (context, index) => RecentGameWidget(game: _recentGames[index]),
             ),
           ),
         ],
       );
   }
 
-  Widget _categories(){
-    return Text('Categories');
+  Widget _builCategories(Size size){
+    return Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(height: 25,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text("CATEGORIES", style: Theme.of(context).textTheme.labelMedium,),
+              Text("See all →", style: Theme.of(context).textTheme.labelSmall,),
+            ],
+          ),
+          const SizedBox(height: 15,),
+          SizedBox(
+            height: size.height*0.15,
+            child: ListView.separated(
+              shrinkWrap: true,
+              separatorBuilder: (context, index) => const SizedBox(width: 15),
+              itemCount: _categories.length,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) => CategoryWidget(category: _categories[index]),
+            ),
+          ),
+        ],
+      );
   }
 
   Widget _newGames(){
     return Text('New Games');
   }
 }
+

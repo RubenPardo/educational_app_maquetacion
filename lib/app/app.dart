@@ -16,7 +16,8 @@ class MainApp extends StatelessWidget {
         textTheme: const TextTheme(
           labelMedium: TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.textColorTag,fontFamily: 'Inter'),
           labelLarge: TextStyle(fontSize: 17, fontWeight: FontWeight.w700, color: AppColors.textColorTag,fontFamily: 'Inter'),
-          bodyMedium: TextStyle(color: AppColors.textColor, fontSize: 17, fontWeight: FontWeight.w700),
+          labelSmall: TextStyle(fontSize: 13, color: AppColors.textColorTag,fontFamily: 'Caption'),
+          bodyMedium: TextStyle(color: AppColors.textColor, fontSize: 17, fontWeight: FontWeight.w700, fontFamily: 'Regular'),
           headlineLarge: TextStyle(color: AppColors.textColor, fontSize: 28, fontWeight: FontWeight.w700),
           headlineMedium: TextStyle(color: AppColors.textColor, fontSize: 22, fontWeight: FontWeight.w700)
         )
