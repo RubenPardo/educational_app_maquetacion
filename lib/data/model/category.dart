@@ -15,7 +15,7 @@ class Category{
   }
 
   factory Category.sicence(){
-    return Category('Science', 'assets/images/science_logo.png',AppColors.mathBC, AppColors.mathSC);
+    return Category('Science', 'assets/images/science_logo.png',AppColors.scienceBC, AppColors.scienceBC);
   }
 
   factory Category.grammar(){
@@ -23,7 +23,7 @@ class Category{
   }
 
   factory Category.music(){
-    return Category('Math', 'assets/images/music_logo.png',AppColors.mathBC, AppColors.mathSC);
+    return Category('Math', 'assets/images/music_logo.png',AppColors.musicBC, AppColors.musicBC);
   }
 
   factory Category.geography(){

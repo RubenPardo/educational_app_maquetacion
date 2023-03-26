@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_staggered_grid_view: ^0.6.2
 
 dev_dependencies:
   flutter_test:
@@ -21,13 +22,16 @@ flutter:
   assets:
     - assets/images/diamonds.png
     - assets/images/music_card.png
+    - assets/images/music_card_2.png
     - assets/images/geo_card.png
     - assets/images/find_card.png
     - assets/images/math_logo.png
     - assets/images/science_logo.png
+    - assets/images/science_card.png
     - assets/images/geo_logo.png
     - assets/images/music_logo.png
     - assets/images/grammar_logo.png
+    - assets/images/grammar_card.png
 
   fonts:
     - family: Roslindale

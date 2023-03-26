@@ -7,7 +7,7 @@ class GameService{
   List<Game> getRecentGames(){
     return [
       Game(
-        Category.music(), 
+        Category.math(), 
         66,
         "The game of six numbers", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor. Praesent scelerisque molestie ipsum, consequat placerat nulla congue eget. Vestibulum vitae diam quis odio rhoncus convallis at non ipsum.", 
         "assets/images/music_card.png",
@@ -51,7 +51,7 @@ class GameService{
         Category.grammar(), 
         0,
         "Listen and learn", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor. Praesent scelerisque molestie ipsum, consequat placerat nulla congue eget. Vestibulum vitae diam quis odio rhoncus convallis at non ipsum.", 
-        "assets/images/musicIlustration.png",
+        "assets/images/grammar_card.png",
         [
           SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
           SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
@@ -62,12 +62,35 @@ class GameService{
       Game(
         Category.sicence(), 
         25,
-        "Memory cards", "Wear your explorer’s helmet and be prepared to fly to exciting and exotic locations.", 
-        "assets/images/musicIlustration.png",
+        "Memory cards", "Wear your explorer's helmet and be prepared to fly to exciting and exotic locations.", 
+        "assets/images/science_card.png",
         [
           SubGame('The European capitals', 'assets/images/arraound_the_world_1.png', 2),
           SubGame('The highest mountains', 'assets/images/arraound_the_world_2.png', 3),
           
+        ]
+      ),
+      Game(
+        Category.music(), 
+        25,
+        "Music", "Wear your explorer's helmet and be prepared to fly to exciting and exotic locations.", 
+        "assets/images/music_card_2.png",
+        [
+          SubGame('The European capitals', 'assets/images/arraound_the_world_1.png', 2),
+          SubGame('The highest mountains', 'assets/images/arraound_the_world_2.png', 3),
+          
+        ]
+      ),
+      Game(
+        Category.math(), 
+        0,
+        "Titulo", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor. Praesent scelerisque molestie ipsum, consequat placerat nulla congue eget. Vestibulum vitae diam quis odio rhoncus convallis at non ipsum.", 
+        "assets/images/grammar_card.png",
+        [
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 4),
+        
         ]
       ),
     ];

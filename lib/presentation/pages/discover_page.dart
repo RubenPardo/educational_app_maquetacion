@@ -2,12 +2,11 @@ import 'package:educational_app_maquetacion/data/model/category.dart';
 import 'package:educational_app_maquetacion/data/model/game.dart';
 import 'package:educational_app_maquetacion/data/service/game_service.dart';
 import 'package:educational_app_maquetacion/presentation/widgets/cateogry_widget.dart';
+import 'package:educational_app_maquetacion/presentation/widgets/game_widget.dart';
 import 'package:educational_app_maquetacion/presentation/widgets/points_widget.dart';
 import 'package:educational_app_maquetacion/presentation/widgets/recent_game_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class DiscoverPage extends StatefulWidget {
   const DiscoverPage({super.key});
@@ -20,6 +19,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
 
   final List<Game> _recentGames = GameService().getRecentGames();
   final List<Category> _categories = GameService().getCategories();
+  final List<Game> _newGames = GameService().getNewGames();
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
               _header(),
               _recent(size),
               _builCategories(size),
-              _newGames(),
+              _new(size),
             ],
           ),
       ),
@@ -110,8 +110,28 @@ class _DiscoverPageState extends State<DiscoverPage> {
       );
   }
 
-  Widget _newGames(){
-    return Text('New Games');
+  Widget _new(Size size){
+    return Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(height: 25,),
+          Text("NEW GAMES", style: Theme.of(context).textTheme.labelMedium,),
+          const SizedBox(height: 15,),
+          Flexible(
+            fit: FlexFit.loose,
+            child: MasonryGridView.builder(
+              padding: const EdgeInsets.all(0),
+              gridDelegate: const SliverSimpleGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+              itemCount: _newGames.length,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemBuilder: (context, index) => GameWidget(game: _newGames[index],isExpand: ( index%3 != 0)),
+            ),
+          )
+        ],
+      );
   }
 }
 

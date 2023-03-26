@@ -14,6 +14,10 @@ class AppColors{
   static const Color mathBC = Color(0xFFB18CFE);
   static const Color mathSC = Color(0xFFD8C9FE);
 
+  static const Color musicBC = Color(0xFFFFAB01);
+
+  static const Color scienceBC = Color(0xFFEE719E);
+
   static const Color geoBC = Color(0xFF64FCD9);
   static const Color geoSC = Color(0xFFC3FFF1);
 

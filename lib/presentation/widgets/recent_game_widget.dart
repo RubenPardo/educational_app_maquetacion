@@ -11,7 +11,6 @@ class RecentGameWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(game.imageAsset);
     Size size = MediaQuery.of(context).size;
     return SizedBox(
       width: size.width*0.6,
