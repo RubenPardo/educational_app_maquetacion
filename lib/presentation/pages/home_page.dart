@@ -17,48 +17,58 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: _bottomNavigationBar(),
-      body: 
+      // Si lo pongo aqui no se aplica la transparencia
+      //bottomNavigationBar: _bottomNavigationBar(),
+      body: Stack(
+        children: [
            <Widget>[
               const DiscoverPage(),
               const SearchPage(),
               const Center(child: Text("Favoritos"),),
               const Center(child: Text("Profile"),),
             ][_currentPageIndex],
-        
+           
+           // si lo aplico aqui no se ve todo el contenido por como funciona el stack
+           Align(
+            alignment: Alignment.bottomCenter,
+            child: _bottomNavigationBar(),
+           )
+        ],
+      )
     );
   }
 
   Widget _bottomNavigationBar(){
-    return NavigationBar(
-      // TODO como hacer transparencia en el navigation bar
-      // TODO como quitar el color de fondo del icono
-      backgroundColor: AppColors.bottomColor,
-      onDestinationSelected: (int index) {
+    return BottomNavigationBar(
+      iconSize: 24,
+      selectedItemColor: AppColors.textColorTag,
+      unselectedItemColor: AppColors.textColor,
+      currentIndex: _currentPageIndex,
+      type: BottomNavigationBarType.fixed,
+      backgroundColor: AppColors.bottomColor.withOpacity(0.9),
+      onTap: (int index) {
           setState(() {
             _currentPageIndex = index;
           });
         },
-        selectedIndex: _currentPageIndex,
-      destinations: const [
-        NavigationDestination(
-            selectedIcon: Icon(Icons.explore, color: Colors.white,),
-            icon: Icon(Icons.explore, color: AppColors.iconColor,),
+      items: [
+        BottomNavigationBarItem(
+            
+            icon: Image.asset('assets/images/discover_icon.png',),
             label: 'Discover',
           ),
-          NavigationDestination(
-            selectedIcon: Icon(Icons.search, color: Colors.white,),
-            icon: Icon(Icons.search, color: AppColors.iconColor,),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/images/search_icon.png'),
             label: 'Search',
           ),
-          NavigationDestination(
-            selectedIcon: Icon(Icons.favorite, color: Colors.white,),
-            icon: Icon(Icons.favorite, color: AppColors.iconColor,),
+          BottomNavigationBarItem(
+            
+            icon: Image.asset('assets/images/fav_icon.png'),
             label: 'Favorites',
           ),
-          NavigationDestination(
-            selectedIcon: Icon(Icons.person, color: Colors.white,),
-            icon: Icon(Icons.person, color: AppColors.iconColor,),
+          BottomNavigationBarItem(
+            
+            icon: Image.asset('assets/images/profile_icon.png'),
             label: 'Profile',
           ),
       ],

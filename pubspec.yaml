@@ -35,6 +35,12 @@ flutter:
     - assets/images/clock_card.png
     - assets/images/puzzle_card.png
     - assets/images/search_icon.png
+    - assets/images/discover_icon.png
+    - assets/images/fav_icon.png
+    - assets/images/profile_icon.png
+    - assets/images/game_details_bg.png
+    - assets/images/play_icon.png
+    - assets/images/mountain.png
 
   fonts:
     - family: Roslindale

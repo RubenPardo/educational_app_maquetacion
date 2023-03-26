@@ -12,9 +12,9 @@ class GameService{
         "The game of six numbers", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor. Praesent scelerisque molestie ipsum, consequat placerat nulla congue eget. Vestibulum vitae diam quis odio rhoncus convallis at non ipsum.", 
         "assets/images/music_card.png",
         [
-          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
-          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
-          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 3),
         
         ]
       ),
@@ -25,8 +25,8 @@ class GameService{
         "assets/images/geo_card.png",
         
         [
-          SubGame('The European capitals', 'assets/images/arraound_the_world_1.png', 2),
-          SubGame('The highest mountains', 'assets/images/arraound_the_world_2.png', 3),
+          SubGame('The European capitals', 'assets/images/geo_logo.png', 2),
+          SubGame('The highest mountains', 'assets/images/geo_logo.png', 3),
           
         ]
       ),
@@ -37,8 +37,8 @@ class GameService{
         "assets/images/find_card.png",
         
         [
-          SubGame('The European capitals', 'assets/images/arraound_the_world_1.png', 2),
-          SubGame('The highest mountains', 'assets/images/arraound_the_world_2.png', 3),
+          SubGame('The European capitals', 'assets/images/geo_logo.png', 2),
+          SubGame('The highest mountains', 'assets/images/geo_logo.png', 3),
           
         ]
       ),
@@ -53,9 +53,9 @@ class GameService{
         "Listen and learn", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor. Praesent scelerisque molestie ipsum, consequat placerat nulla congue eget. Vestibulum vitae diam quis odio rhoncus convallis at non ipsum.", 
         "assets/images/grammar_card.png",
         [
-          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
-          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
-          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 4),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 4),
         
         ]
       ),
@@ -65,8 +65,8 @@ class GameService{
         "Memory cards", "Wear your explorer's helmet and be prepared to fly to exciting and exotic locations.", 
         "assets/images/science_card.png",
         [
-          SubGame('The European capitals', 'assets/images/arraound_the_world_1.png', 2),
-          SubGame('The highest mountains', 'assets/images/arraound_the_world_2.png', 3),
+          SubGame('The European capitals', 'assets/images/geo_logo.png', 2),
+          SubGame('The highest mountains', 'assets/images/geo_logo.png', 3),
           
         ]
       ),
@@ -81,8 +81,8 @@ class GameService{
         "Listen and learn", "Wear your explorer's helmet and be prepared to fly to exciting and exotic locations.", 
         "assets/images/music_card_2.png",
         [
-          SubGame('The European capitals', 'assets/images/arraound_the_world_1.png', 5),
-          SubGame('The highest mountains', 'assets/images/arraound_the_world_2.png', 5),
+          SubGame('The European capitals', 'assets/images/geo_logo.png', 5),
+          SubGame('The highest mountains', 'assets/images/geo_logo.png', 5),
           
         ]
       ),
@@ -92,9 +92,9 @@ class GameService{
         "Listen and learn", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor. Praesent scelerisque molestie ipsum, consequat placerat nulla congue eget. Vestibulum vitae diam quis odio rhoncus convallis at non ipsum.", 
         "assets/images/find_card.png",
         [
-          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
-          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
-          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 4),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 4),
         
         ]
       ),
@@ -104,9 +104,9 @@ class GameService{
         "Puzzle games", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor. Praesent scelerisque molestie ipsum, consequat placerat nulla congue eget. Vestibulum vitae diam quis odio rhoncus convallis at non ipsum.", 
         "assets/images/puzzle_card.png",
         [
-          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
-          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
-          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 3),
         
         ]
       ),
@@ -116,8 +116,8 @@ class GameService{
         "Around the world", "Wear your explorer’s helmet and be prepared to fly to exciting and exotic locations.", 
         "assets/images/clock_card.png",
         [
-          SubGame('The European capitals', 'assets/images/arraound_the_world_1.png', 2),
-          SubGame('The highest mountains', 'assets/images/arraound_the_world_2.png', 3),
+          SubGame('The European capitals', 'assets/images/geo_logo.png', 2),
+          SubGame('The highest mountains', 'assets/images/geo_logo.png', 3),
           
         ]
       ),

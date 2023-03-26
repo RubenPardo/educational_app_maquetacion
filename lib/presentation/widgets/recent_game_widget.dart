@@ -1,4 +1,5 @@
 import 'package:educational_app_maquetacion/data/model/game.dart';
+import 'package:educational_app_maquetacion/presentation/pages/game_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -12,26 +13,35 @@ class RecentGameWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return SizedBox(
-      width: size.width*0.6,
-      height: size.height*0.215,
-      child: Stack(
-        children: [
-          // card -----------
-          Align(
-            alignment: Alignment.topLeft,
-            child: _card(size,context)
-          ),
-          // progres -
-          Padding(
-            padding: const EdgeInsets.only(left: 15),
-            child: Align(
-              alignment: Alignment.bottomLeft,
-              child: _progress(size,context),
+    return GestureDetector(
+      onTap: () {
+        showModalBottomSheet(
+          isScrollControlled: true,
+          context: context, builder:(context) {
+          return GameDetails(game: game);
+        },);
+      },
+      child: SizedBox(
+        width: size.width*0.6,
+        height: size.height*0.215,
+        child: Stack(
+          children: [
+            // card -----------
+            Align(
+              alignment: Alignment.topLeft,
+              child: _card(size,context)
             ),
-          )
-        ],
-      )
+            // progres -
+            Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: Align(
+                alignment: Alignment.bottomLeft,
+                child: _progress(size,context),
+              ),
+            )
+          ],
+        )
+      ),
     );
   }
 

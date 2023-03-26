@@ -72,7 +72,7 @@ class _SearchPageState extends State<SearchPage> {
         fillColor: AppColors.textFieldBG,
         filled: true,
         hintText: 'Games, subjects...',
-        prefixIcon: Image.asset('assets/images/search_icon.png'),
+        prefixIcon: Image.asset('assets/images/search_icon.png',cacheHeight: 15,),
         hintStyle: Theme.of(context).textTheme.labelSmall,
         border: const OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(4)))
 
