@@ -31,6 +31,8 @@ class _HomePageState extends State<HomePage> {
 
   Widget _bottomNavigationBar(){
     return NavigationBar(
+      // TODO como hacer transparencia en el navigation bar
+      // TODO como quitar el color de fondo del icono
       backgroundColor: AppColors.bottomColor,
       onDestinationSelected: (int index) {
           setState(() {

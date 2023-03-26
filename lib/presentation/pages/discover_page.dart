@@ -1,7 +1,9 @@
 import 'package:educational_app_maquetacion/data/model/category.dart';
 import 'package:educational_app_maquetacion/data/model/game.dart';
 import 'package:educational_app_maquetacion/data/service/game_service.dart';
+import 'package:educational_app_maquetacion/presentation/widgets/categories_widget.dart';
 import 'package:educational_app_maquetacion/presentation/widgets/cateogry_widget.dart';
+import 'package:educational_app_maquetacion/presentation/widgets/game_grid_view_widget.dart';
 import 'package:educational_app_maquetacion/presentation/widgets/game_widget.dart';
 import 'package:educational_app_maquetacion/presentation/widgets/points_widget.dart';
 import 'package:educational_app_maquetacion/presentation/widgets/recent_game_widget.dart';
@@ -96,16 +98,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
             ],
           ),
           const SizedBox(height: 15,),
-          SizedBox(
-            height: size.height*0.15,
-            child: ListView.separated(
-              shrinkWrap: true,
-              separatorBuilder: (context, index) => const SizedBox(width: 15),
-              itemCount: _categories.length,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) => CategoryWidget(category: _categories[index]),
-            ),
-          ),
+          CategoriesWidget(categories: _categories)
         ],
       );
   }
@@ -119,17 +112,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
           const SizedBox(height: 25,),
           Text("NEW GAMES", style: Theme.of(context).textTheme.labelMedium,),
           const SizedBox(height: 15,),
-          Flexible(
-            fit: FlexFit.loose,
-            child: MasonryGridView.builder(
-              padding: const EdgeInsets.all(0),
-              gridDelegate: const SliverSimpleGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-              itemCount: _newGames.length,
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              itemBuilder: (context, index) => GameWidget(game: _newGames[index],isExpand: ( index%3 != 0)),
-            ),
-          )
+          GameGridViewWidget(games: _newGames)
         ],
       );
   }

@@ -70,29 +70,6 @@ class GameService{
           
         ]
       ),
-      Game(
-        Category.music(), 
-        25,
-        "Music", "Wear your explorer's helmet and be prepared to fly to exciting and exotic locations.", 
-        "assets/images/music_card_2.png",
-        [
-          SubGame('The European capitals', 'assets/images/arraound_the_world_1.png', 2),
-          SubGame('The highest mountains', 'assets/images/arraound_the_world_2.png', 3),
-          
-        ]
-      ),
-      Game(
-        Category.math(), 
-        0,
-        "Titulo", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor. Praesent scelerisque molestie ipsum, consequat placerat nulla congue eget. Vestibulum vitae diam quis odio rhoncus convallis at non ipsum.", 
-        "assets/images/grammar_card.png",
-        [
-          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
-          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
-          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 4),
-        
-        ]
-      ),
     ];
   }
 
@@ -100,9 +77,32 @@ class GameService{
     return [
       Game(
         Category.music(), 
+        25,
+        "Listen and learn", "Wear your explorer's helmet and be prepared to fly to exciting and exotic locations.", 
+        "assets/images/music_card_2.png",
+        [
+          SubGame('The European capitals', 'assets/images/arraound_the_world_1.png', 5),
+          SubGame('The highest mountains', 'assets/images/arraound_the_world_2.png', 5),
+          
+        ]
+      ),
+      Game(
+        Category.grammar(), 
+        0,
+        "Listen and learn", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor. Praesent scelerisque molestie ipsum, consequat placerat nulla congue eget. Vestibulum vitae diam quis odio rhoncus convallis at non ipsum.", 
+        "assets/images/find_card.png",
+        [
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 4),
+        
+        ]
+      ),
+      Game(
+        Category.math(), 
         66,
-        "The game of six numbers", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor. Praesent scelerisque molestie ipsum, consequat placerat nulla congue eget. Vestibulum vitae diam quis odio rhoncus convallis at non ipsum.", 
-        "assets/images/musicIlustration.png",
+        "Puzzle games", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor. Praesent scelerisque molestie ipsum, consequat placerat nulla congue eget. Vestibulum vitae diam quis odio rhoncus convallis at non ipsum.", 
+        "assets/images/puzzle_card.png",
         [
           SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
           SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'imageUrl', 3),
@@ -111,10 +111,10 @@ class GameService{
         ]
       ),
       Game(
-        Category.geography(), 
+        Category.sicence(), 
         25,
         "Around the world", "Wear your explorer’s helmet and be prepared to fly to exciting and exotic locations.", 
-        "assets/images/musicIlustration.png",
+        "assets/images/clock_card.png",
         [
           SubGame('The European capitals', 'assets/images/arraound_the_world_1.png', 2),
           SubGame('The highest mountains', 'assets/images/arraound_the_world_2.png', 3),

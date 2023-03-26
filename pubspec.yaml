@@ -32,6 +32,9 @@ flutter:
     - assets/images/music_logo.png
     - assets/images/grammar_logo.png
     - assets/images/grammar_card.png
+    - assets/images/clock_card.png
+    - assets/images/puzzle_card.png
+    - assets/images/search_icon.png
 
   fonts:
     - family: Roslindale
