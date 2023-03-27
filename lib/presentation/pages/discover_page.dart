@@ -2,13 +2,10 @@ import 'package:educational_app_maquetacion/data/model/category.dart';
 import 'package:educational_app_maquetacion/data/model/game.dart';
 import 'package:educational_app_maquetacion/data/service/game_service.dart';
 import 'package:educational_app_maquetacion/presentation/widgets/categories_widget.dart';
-import 'package:educational_app_maquetacion/presentation/widgets/cateogry_widget.dart';
 import 'package:educational_app_maquetacion/presentation/widgets/game_grid_view_widget.dart';
-import 'package:educational_app_maquetacion/presentation/widgets/game_widget.dart';
 import 'package:educational_app_maquetacion/presentation/widgets/points_widget.dart';
 import 'package:educational_app_maquetacion/presentation/widgets/recent_game_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class DiscoverPage extends StatefulWidget {
   const DiscoverPage({super.key});

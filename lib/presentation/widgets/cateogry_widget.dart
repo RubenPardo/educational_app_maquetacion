@@ -1,8 +1,6 @@
 import 'package:educational_app_maquetacion/data/model/category.dart';
 import 'package:educational_app_maquetacion/shared/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class CategoryWidget extends StatelessWidget {
   final Category category;

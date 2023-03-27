@@ -1,8 +1,6 @@
 import 'package:educational_app_maquetacion/data/model/category.dart';
 import 'package:educational_app_maquetacion/presentation/widgets/cateogry_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class CategoriesWidget extends StatelessWidget {
   final List<Category> categories;

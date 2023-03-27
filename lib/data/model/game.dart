@@ -1,6 +1,6 @@
 import 'package:educational_app_maquetacion/data/model/category.dart';
 import 'package:educational_app_maquetacion/data/model/sub_game.dart';
-import 'package:flutter/material.dart';
+
 
 class Game{
   Category category;

@@ -23,7 +23,7 @@ class Category{
   }
 
   factory Category.music(){
-    return Category('Math', 'assets/images/music_logo.png',AppColors.musicBC, AppColors.musicBC);
+    return Category('Music', 'assets/images/music_logo.png',AppColors.musicBC, AppColors.musicBC);
   }
 
   factory Category.geography(){

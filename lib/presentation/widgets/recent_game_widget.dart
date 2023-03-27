@@ -1,8 +1,6 @@
 import 'package:educational_app_maquetacion/data/model/game.dart';
 import 'package:educational_app_maquetacion/presentation/pages/game_details.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 import 'dart:math' as math;
 
@@ -145,7 +143,7 @@ class ProgressIndicatorPainter extends CustomPainter {
       ..strokeCap = StrokeCap.butt
       ..style = PaintingStyle.stroke
       ..strokeWidth = width;
-    final startAngleRad = (3*math.pi / 2);
+    const startAngleRad = (3*math.pi / 2);
     final sweepAngleRad = sweepAngle * (math.pi / 180);
     final center = Offset(size.width / 2, size.height / 2);
     final radius = (size.width / 2.1) - (width / 2.1);

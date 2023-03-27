@@ -5,9 +5,6 @@ import 'package:educational_app_maquetacion/presentation/widgets/categories_widg
 import 'package:educational_app_maquetacion/presentation/widgets/game_grid_view_widget.dart';
 import 'package:educational_app_maquetacion/shared/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter/widgets.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -20,7 +17,16 @@ class _SearchPageState extends State<SearchPage> {
 
 
   final List<Category> _categories = GameService().getCategories();
+  late List<Category> _categoriesTMP;
   final List<Game> _recomendedGames = GameService().getRecomendedGames();
+  late List<Game> _recomendedGamesTMP;
+
+  @override
+  void initState() {
+    super.initState();
+    _categoriesTMP = _categories;
+    _recomendedGamesTMP = _recomendedGames;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +46,7 @@ class _SearchPageState extends State<SearchPage> {
                 const SizedBox(height: 15,),
                 _searchBar(),
                 const SizedBox(height: 15,),
-                CategoriesWidget(categories: _categories),
+                _categoriesTMP.isEmpty ?  const Padding(padding: EdgeInsets.only(top: 24), child: Center(child: Text('No categories'),),): CategoriesWidget(categories: _categoriesTMP),
                 const SizedBox(height: 15,),
                 _recomended(size),
               ],
@@ -59,13 +65,21 @@ class _SearchPageState extends State<SearchPage> {
           const SizedBox(height: 25,),
           Text("RECOMENDED", style: Theme.of(context).textTheme.labelMedium,),
           const SizedBox(height: 15,),
-          GameGridViewWidget(games: _recomendedGames)
+          _recomendedGamesTMP.isEmpty 
+            ? const Padding(
+              padding:  EdgeInsets.only(top:24.0),
+              child:  Center(child: Text('No games')),
+            )
+            : GameGridViewWidget(games: _recomendedGamesTMP)
         ],
       );
   }
 
   Widget _searchBar(){
     return TextField(
+      onChanged: (name) {
+        _filterGamesAndCategoriesByName(name);
+      },
       style: Theme.of(context).textTheme.bodyMedium,
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.all(10),
@@ -86,4 +100,17 @@ class _SearchPageState extends State<SearchPage> {
     );
   }
 
+
+  void _filterGamesAndCategoriesByName(String name){
+    setState(() {
+      if(name.trim().isEmpty){
+        _categoriesTMP = _categories;
+        _recomendedGamesTMP = _recomendedGames;
+      }else{
+        _categoriesTMP = _categories.where((element) => element.name.toLowerCase().startsWith(name.toLowerCase())).toList();
+      _recomendedGamesTMP = _recomendedGames.where((element) => element.name.toLowerCase().startsWith(name.toLowerCase())).toList();
+      }
+      
+    });
+  }
 }
