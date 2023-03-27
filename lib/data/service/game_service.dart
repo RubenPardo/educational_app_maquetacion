@@ -121,6 +121,63 @@ class GameService{
           
         ]
       ),
+      Game(
+        Category.music(), 
+        25,
+        "Listen and learn", "Wear your explorer's helmet and be prepared to fly to exciting and exotic locations.", 
+        "assets/images/music_card_2.png",
+        [
+          SubGame('The European capitals', 'assets/images/geo_logo.png', 5),
+          SubGame('The highest mountains', 'assets/images/geo_logo.png', 5),
+          
+        ]
+      ),
+      Game(
+        Category.grammar(), 
+        0,
+        "Listen and learn", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor. Praesent scelerisque molestie ipsum, consequat placerat nulla congue eget. Vestibulum vitae diam quis odio rhoncus convallis at non ipsum.", 
+        "assets/images/find_card.png",
+        [
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 4),
+        
+        ]
+      ),
+      Game(
+        Category.math(), 
+        66,
+        "Puzzle games", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor. Praesent scelerisque molestie ipsum, consequat placerat nulla congue eget. Vestibulum vitae diam quis odio rhoncus convallis at non ipsum.", 
+        "assets/images/puzzle_card.png",
+        [
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 3),
+          SubGame('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis pretium tempor.', 'assets/images/geo_logo.png', 3),
+        
+        ]
+      ),
+      Game(
+        Category.sicence(), 
+        25,
+        "Around the world", "Wear your explorer’s helmet and be prepared to fly to exciting and exotic locations.", 
+        "assets/images/clock_card.png",
+        [
+          SubGame('The European capitals', 'assets/images/geo_logo.png', 2),
+          SubGame('The highest mountains', 'assets/images/geo_logo.png', 3),
+          
+        ]
+      ),
+     Game(
+        Category.sicence(), 
+        25,
+        "Around the world", "Wear your explorer’s helmet and be prepared to fly to exciting and exotic locations.", 
+        "assets/images/clock_card.png",
+        [
+          SubGame('The European capitals', 'assets/images/geo_logo.png', 2),
+          SubGame('The highest mountains', 'assets/images/geo_logo.png', 3),
+          
+        ]
+      ),
     ];
   }
 

@@ -35,22 +35,26 @@ class _SearchPageState extends State<SearchPage> {
       onTap: (){
         FocusScope.of(context).unfocus();
       },
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                _header(),
-                const SizedBox(height: 15,),
-                _searchBar(),
-                const SizedBox(height: 15,),
-                _categoriesTMP.isEmpty ?  const Padding(padding: EdgeInsets.only(top: 24), child: Center(child: Text('No categories'),),): CategoriesWidget(categories: _categoriesTMP),
-                const SizedBox(height: 15,),
-                _recomended(size),
-              ],
-            ),
+      child: Container(
+      margin: const EdgeInsets.only(bottom: kToolbarHeight+8),
+        
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  _header(),
+                  const SizedBox(height: 15,),
+                  _searchBar(),
+                  const SizedBox(height: 15,),
+                  _categoriesTMP.isEmpty ?  const Padding(padding: EdgeInsets.only(top: 24), child: Center(child: Text('No categories'),),): CategoriesWidget(categories: _categoriesTMP),
+                  const SizedBox(height: 15,),
+                  _recomended(size),
+                ],
+              ),
+          ),
         ),
       ),
     );

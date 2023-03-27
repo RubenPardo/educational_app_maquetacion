@@ -17,7 +17,6 @@ class _HomePageState extends State<HomePage> {
   
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.of(context).padding.bottom);
     return Scaffold(
       // Si lo pongo aqui no se aplica la transparencia
       //bottomNavigationBar: _bottomNavigationBar(),

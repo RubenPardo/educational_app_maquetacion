@@ -23,7 +23,8 @@ class _DiscoverPageState extends State<DiscoverPage> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Padding(
+    return Container(
+      margin: const EdgeInsets.only(bottom: kToolbarHeight+8),
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: SingleChildScrollView(
         child: Column(
